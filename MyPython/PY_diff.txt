@@ -1,0 +1,43 @@
+2.7                            3.4
+=========================================================
+
+1)raw_input("Enter")->str    1)input("Enter")->str
+  input("enter") ->int/eval
+
+2) print "hello world"       2)print("hello world")
+
+3) range(1,11)-mallocs       3)list(range(1,11))-mallocs
+   xrange(1,11)-doest malloc   range(1,11)-doest malloc
+
+4)res=map(fun,arr)           4)res=list(map(fun,arr))
+
+5)list.sort(cmp=None, key=None, reverse=False)  # 2.7
+
+5)list.sort(key=None, reverse=False)  # 3.4
+
+6) file object               6) io.TextIOWrapper
+fob=open("one.txt","r")         fob=open("one.txt","r")
+OR
+fob=file("one.txt","r")
+
+
+7) filenotfoud-IOError       7) filenotfound 
+                                    -FileNotFoundError
+   others     -IOError          Invalid operation
+                                -io.UnsupportedOpceration
+
+8) every class should be     8) it is implicitly
+   a derived class of           derived from "object"
+   "object" class               class
+
+
+9) super(CURRCLASS,self).fn() 9) super().fn()
+
+10) string is ASCII & Unicode 10) by default everything
+                                  is UNICODE
+
+11) res=generator()	      11) res=generator()
+    print res.next()               print(res.__next__())
+    print res.next()               print(res.__next__())
+
+
